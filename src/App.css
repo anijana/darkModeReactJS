@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+html{
+  font-size: 62.5%;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.dark-theme {
+  --main-heading : #5f99be;
+  --para-clr: #fff;
+  --btn-bg-color:#5f99be;
+  --btn-text-clr: #fff;
+  --bg-clr: #111b20;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.light-theme {
+  --main-heading : #5f99be;
+  --para-clr: #333;
+  --btn-bg-color:#111b20;
+  --btn-text-clr: #fff;
+  --bg-clr: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1{
+  font-size: 5rem;
+  color: var(--main-heading);
+}
+
+p{
+  font-size: 2rem;
+  color: var(--para-clr);
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 100px;
+}
+a,li{
+  font-size: 1.8rem;
+  color: var(--btn-bg-color);
+}
+.btn{
+  padding: 1.6rem 3.2rem;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-clr);
+}
+section{
+  max-width: 100%;
+  background-color: var(--bg-clr);
+}
+.container{
+  max-width: 140rem;
+  gap: 9rem;
+}
+.grid{
+  display: grid;
+  gap: 9rem;
+}
+.grid-two-column{
+  grid-template-columns: 1fr 1fr;
+}
+header{
+  height: 9rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  background-color: var(--bg-clr);
+}
+
+header nav ul{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 5rem;
 }
-
-.App-link {
-  color: #61dafb;
+header nav li{
+  list-style: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-section-data{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 15rem;
+}
+.hero-section-data p{
+  margin: 2rem 0;
+}
+.hero-section-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20rem;
+}
+.hero-section-image img{
+  max-height: 60%;
+  width: 250px;
+  height: 250px;
 }
